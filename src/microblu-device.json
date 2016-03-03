@@ -18,11 +18,11 @@
       "type": "string",
       "title": "Pin Type",
       "enum": [
-        "Analog Write",
-        "Digital Write",
-        "Servo Write",
-        "Analog Read",
-        "Digital Read"
+				"analog-write",
+				"digital-write",
+				"servo-write",
+				"analog-read",
+				"digital-read"
       ]
     }
 	}

@@ -10,9 +10,9 @@
 			"type": "string",
 			"title": "Payload Type",
 			"enum": [
-				"Timestamp",
-				"Blank",
-				"String"
+				"data",
+				"none",
+				"string"
 			]
 		},
 		"payload": {

@@ -1,0 +1,9 @@
+{
+	"title": "Function",
+	"type": "object",
+	"properties": {
+		"javaScript": {
+			"type": "string"
+    }
+	}
+}

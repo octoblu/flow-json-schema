@@ -1,0 +1,14 @@
+{
+	"title": "Greater-Than-Or-Equal",
+	"type": "object",
+	"properties": {
+		"left": {
+			"type": "string",
+			"title": "Left"
+    },
+    "right": {
+			"type": "string",
+			"title": "Right"
+    }
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"title": "Echo-Out",
+	"type": "object",
+	"properties": {
+		"callbackUrl": {
+			"type": "string",
+			"title": "Callback Url"
+    },
+    "responseText": {
+			"type": "string",
+			"title": "Response Text"
+    }
+	}
+}

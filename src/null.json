@@ -1,0 +1,14 @@
+{
+	"title": "Null",
+	"type": "object",
+	"properties": {
+		"value": {
+			"type": "string",
+			"title": "Value"
+    },
+    "notNull": {
+			"type": "boolean",
+			"title": "Not Null"
+    }
+	}
+}

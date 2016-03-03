@@ -1,0 +1,33 @@
+{
+	"title": "Math",
+	"type": "object",
+	"properties": {
+		"value": {
+			"type": "string",
+			"title": "Value"
+		},
+		"key": {
+			"type": "string",
+			"title": "Key"
+		},
+    "operation": {
+      "type": "string",
+      "title": "Operation",
+      "enum": [
+        "abs",
+        "acos",
+        "asin",
+        "atan",
+        "ceil",
+        "cos",
+        "exp",
+        "floor",
+        "log",
+        "round",
+        "sin",
+        "sqrt",
+        "tan"
+      ]
+    }
+	}
+}

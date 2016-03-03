@@ -1,0 +1,29 @@
+{
+	"title": "Microblu-Device",
+	"type": "object",
+	"properties": {
+    "uuid": {
+			"type": "string",
+			"title": "UUID"
+		},
+		"value": {
+			"type": "string",
+			"title": "Value"
+		},
+		"pin": {
+			"type": "integer",
+			"title": "Pin"
+		},
+    "pinType": {
+      "type": "string",
+      "title": "Pin Type",
+      "enum": [
+        "Analog Write",
+        "Digital Write",
+        "Servo Write",
+        "Analog Read",
+        "Digital Read"
+      ]
+    }
+	}
+}

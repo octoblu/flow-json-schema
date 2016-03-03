@@ -1,0 +1,10 @@
+{
+	"title": "Throttle",
+	"type": "object",
+	"properties": {
+		"interval": {
+			"type": "integer",
+			"title": "Interval (in milliseconds)"
+    }
+  }
+}

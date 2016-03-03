@@ -1,0 +1,10 @@
+{
+	"title": "Sentiment",
+	"type": "object",
+	"properties": {
+    "value": {
+      "type": "string",
+      "title": "Value"
+    }
+  }
+}

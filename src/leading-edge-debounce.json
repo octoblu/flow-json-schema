@@ -1,0 +1,10 @@
+{
+	"title": "Leading-Edge Debounce",
+	"type": "object",
+	"properties": {
+		"timeout": {
+			"type": "integer",
+			"title": "Timeout (in milliseconds)"
+    }
+	}
+}

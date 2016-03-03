@@ -1,0 +1,10 @@
+{
+	"title": "Broadcast",
+	"type": "object",
+	"properties": {
+		"topic": {
+			"type": "string",
+			"title": "Topic"
+    }
+	}
+}

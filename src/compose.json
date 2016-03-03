@@ -1,0 +1,23 @@
+{
+	"title": "Compose",
+	"type": "object",
+	"properties": {
+    "keyValuePair": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Key Value Pair",
+        "properties": {
+          "value": {
+      			"type": "string",
+      			"title": "Value"
+          },
+          "key": {
+      			"type": "string",
+      			"title": "Key"
+          }
+        }
+      }
+    }
+	}
+}

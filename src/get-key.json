@@ -1,0 +1,14 @@
+{
+	"title": "Function",
+	"type": "object",
+	"properties": {
+    "key": {
+			"type": "string",
+			"title": "Key"
+    },
+    "as": {
+      "type": "string",
+      "title": "As"
+    }
+	}
+}

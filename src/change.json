@@ -1,0 +1,14 @@
+{
+	"title": "Change",
+	"type": "object",
+	"properties": {
+		"value": {
+			"type": "string",
+			"title": "Value"
+    },
+    "key": {
+			"type": "string",
+			"title": "Key"
+    }
+	}
+}

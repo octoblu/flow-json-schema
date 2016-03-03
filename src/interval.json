@@ -1,0 +1,22 @@
+{
+	"title": "Interval",
+	"type": "object",
+	"properties": {
+		"forwardMessage": {
+			"type": "boolean",
+			"title": "Forward Message"
+    },
+    "interval": {
+			"type": "integer",
+			"title": "Interval"
+    },
+    "on": {
+			"type": "boolean",
+			"title": "On"
+    },
+    "topic": {
+			"type": "string",
+			"title": "Topic"
+    }
+	}
+}

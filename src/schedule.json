@@ -1,11 +1,11 @@
 {
-	"title": "Trigger",
+	"title": "Schedule",
 	"type": "object",
 	"properties": {
-		"alias": {
-			"type": "string",
-			"title": "Alias"
-		},
+		"schedule": {
+      "type": "string",
+      "title": "Schedule (crontab, Flows run in the UTC timezone)"
+    },
 		"payloadType": {
 			"type": "string",
 			"title": "Payload Type",
@@ -15,9 +15,13 @@
 				"String"
 			]
 		},
-		"payload": {
+    "payload": {
 			"type": "string",
 			"title": "Payload"
+		},
+		"topic": {
+			"type": "string",
+			"title": "Topic"
 		}
 	}
 }

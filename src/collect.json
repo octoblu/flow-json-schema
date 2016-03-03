@@ -1,0 +1,26 @@
+{
+	"title": "Collect",
+	"type": "object",
+	"properties": {
+		"value": {
+			"type": "string",
+			"title": "Value"
+    },
+    "key": {
+			"type": "string",
+			"title": "Key"
+    },
+    "minimumCount": {
+			"type": "integer",
+			"title": "Minimum Count"
+    },
+    "maximumCount": {
+			"type": "integer",
+			"title": "Maximum Count"
+    },
+    "clearKey": {
+			"type": "string",
+			"title": "Clear Key"
+    }
+	}
+}

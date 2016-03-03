@@ -1,0 +1,14 @@
+{
+	"title": "Set-Key",
+	"type": "object",
+	"properties": {
+		"key": {
+			"type": "string",
+			"title": "Key"
+    },
+    "value": {
+      "type": "string",
+      "title": "Value"
+    }
+  }
+}

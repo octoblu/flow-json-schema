@@ -1,0 +1,10 @@
+{
+	"title": "Meshblu-Device",
+	"type": "object",
+	"properties": {
+		"uuid": {
+			"type": "string",
+			"title": "UUID"
+    }
+	}
+}

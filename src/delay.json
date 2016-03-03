@@ -1,0 +1,20 @@
+{
+	"title": "Debounce",
+	"type": "object",
+	"properties": {
+		"timeout": {
+			"type": "integer",
+			"title": "Timeout"
+    },
+    "unit": {
+			"type": "string",
+			"title": "Units",
+			"enum": [
+				"Milliseconds",
+				"Seconds",
+				"Minutes",
+        "Hours"
+			]
+		}
+	}
+}

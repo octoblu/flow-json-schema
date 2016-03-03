@@ -1,0 +1,14 @@
+{
+	"title": "Template",
+	"type": "object",
+	"properties": {
+		"key": {
+			"type": "string",
+			"title": "Key"
+    },
+    "template": {
+      "type": "string",
+      "title": "Template"
+    }
+  }
+}

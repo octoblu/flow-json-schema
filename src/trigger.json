@@ -1,0 +1,53 @@
+{
+	"title": "Trigger",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string",
+			"title": "Name"
+		},
+		"alias": {
+			"type": "string",
+			"title": "Alias"
+		},
+		"payloadSwitch": {
+      "title": "Payload",
+			"type": "object",
+			"properies": {
+				"payloadType": {
+					"type": "string"
+        }
+			},
+			"oneOf": [
+        {},
+        {
+				"properties": {
+					"payloadType": {
+						"enum": ["Blank"]
+					}
+				}
+			}, {
+				"properties": {
+					"payloadType": {
+						"enum": ["Timestamp"]
+					}
+				}
+			}, {
+				"properties": {
+					"payloadType": {
+						"enum": ["String"]
+					},
+					"payload": {
+						"type": "string",
+						"title": "Payload"
+					}
+				}
+			}],
+      "x-hints": {
+        "form": {
+          "selector": "payloadType"
+        }
+      }
+		}
+	}
+}

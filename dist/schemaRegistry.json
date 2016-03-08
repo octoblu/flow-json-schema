@@ -191,7 +191,7 @@
       }
     }
   },
-  "http-delete": {
+  "http-request-delete": {
     "title": "Http-Delete",
     "type": "object",
     "properties": {
@@ -235,7 +235,7 @@
       }
     }
   },
-  "http-get": {
+  "http-request-get": {
     "title": "Http-Get",
     "type": "object",
     "properties": {
@@ -279,7 +279,7 @@
       }
     }
   },
-  "http-post": {
+  "http-request-post": {
     "title": "Http-Post",
     "type": "object",
     "properties": {
@@ -348,7 +348,7 @@
       }
     }
   },
-  "http-put": {
+  "http-request-put": {
     "title": "Http-Put",
     "type": "object",
     "properties": {

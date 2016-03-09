@@ -2,7 +2,7 @@
 	"title": "Echo-Out",
 	"type": "object",
 	"properties": {
-		"callbackUrl": {
+		"url": {
 			"type": "string",
 			"title": "Callback Url"
     },

@@ -1,12 +1,12 @@
 {
-	"title": "Http-Delete",
+	"title": "Rss-Request",
 	"type": "object",
 	"properties": {
 		"url": {
       "type": "string",
       "title": "Url"
     },
-    "queryKeys": {
+		"queryKeys": {
 			"type": "array",
       "items": {
         "type": "string",

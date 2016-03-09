@@ -2,20 +2,14 @@
 	"title": "Compose",
 	"type": "object",
 	"properties": {
-    "keyValuePair": {
+    "compose": {
       "type": "array",
       "items": {
-        "type": "object",
+        "type": "array",
         "title": "Key Value Pair",
-        "properties": {
-          "value": {
-      			"type": "string",
-      			"title": "Value"
-          },
-          "key": {
-      			"type": "string",
-      			"title": "Key"
-          }
+        "items": {
+          "type": "string",
+					"type": "string"
         }
       }
     }

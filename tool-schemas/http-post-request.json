@@ -1,12 +1,26 @@
 {
-	"title": "Http-Delete",
+	"title": "Http-Post",
 	"type": "object",
 	"properties": {
 		"url": {
       "type": "string",
       "title": "Url"
     },
-    "queryKeys": {
+		"bodyKeys": {
+			"type": "array",
+      "items": {
+        "type": "string",
+        "title": "Key"
+      }
+    },
+		"bodyValues": {
+			"type": "array",
+      "items": {
+        "type": "string",
+        "title": "Value"
+      }
+    },
+		"queryKeys": {
 			"type": "array",
       "items": {
         "type": "string",
@@ -20,6 +34,14 @@
         "title": "Value"
       }
     },
+    "bodyEncoding": {
+			"type": "string",
+			"title": "Encoding",
+			"enum": [
+				"json",
+				"form"
+			]
+		},
 		"headerKeys": {
 			"type": "array",
       "items": {

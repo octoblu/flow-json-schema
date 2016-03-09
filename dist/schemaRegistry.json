@@ -35,11 +35,11 @@
         "type": "string",
         "title": "Key"
       },
-      "minimumCount": {
+      "min": {
         "type": "integer",
         "title": "Minimum Count"
       },
-      "maximumCount": {
+      "max": {
         "type": "integer",
         "title": "Maximum Count"
       },
@@ -53,20 +53,13 @@
     "title": "Compose",
     "type": "object",
     "properties": {
-      "keyValuePair": {
+      "compose": {
         "type": "array",
         "items": {
-          "type": "object",
+          "type": "array",
           "title": "Key Value Pair",
-          "properties": {
-            "value": {
-              "type": "string",
-              "title": "Value"
-            },
-            "key": {
-              "type": "string",
-              "title": "Key"
-            }
+          "items": {
+            "type": "string"
           }
         }
       }
@@ -83,14 +76,14 @@
     }
   },
   "delay": {
-    "title": "Debounce",
+    "title": "Delay",
     "type": "object",
     "properties": {
       "timeout": {
         "type": "integer",
         "title": "Timeout"
       },
-      "unit": {
+      "timeoutUnits": {
         "type": "string",
         "title": "Units",
         "enum": [
@@ -112,11 +105,21 @@
       }
     }
   },
+  "device": {
+    "title": "Meshblu-Device",
+    "type": "object",
+    "properties": {
+      "uuid": {
+        "type": "string",
+        "title": "UUID"
+      }
+    }
+  },
   "echo-out": {
     "title": "Echo-Out",
     "type": "object",
     "properties": {
-      "callbackUrl": {
+      "url": {
         "type": "string",
         "title": "Callback Url"
       },
@@ -144,7 +147,7 @@
     "title": "Function",
     "type": "object",
     "properties": {
-      "javaScript": {
+      "func": {
         "type": "string"
       }
     }
@@ -163,7 +166,7 @@
       }
     }
   },
-  "greater-than-or-equal": {
+  "greater-than-equal": {
     "title": "Greater-Than-Or-Equal",
     "type": "object",
     "properties": {
@@ -191,6 +194,126 @@
       }
     }
   },
+  "http-post-request": {
+    "title": "Http-Post",
+    "type": "object",
+    "properties": {
+      "url": {
+        "type": "string",
+        "title": "Url"
+      },
+      "bodyKeys": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Key"
+        }
+      },
+      "bodyValues": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Value"
+        }
+      },
+      "queryKeys": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Key"
+        }
+      },
+      "queryValues": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Value"
+        }
+      },
+      "bodyEncoding": {
+        "type": "string",
+        "title": "Encoding",
+        "enum": [
+          "json",
+          "form"
+        ]
+      },
+      "headerKeys": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Key"
+        }
+      },
+      "headerValues": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Value"
+        }
+      }
+    }
+  },
+  "http-put-request": {
+    "title": "Http-Put",
+    "type": "object",
+    "properties": {
+      "url": {
+        "type": "string",
+        "title": "Url"
+      },
+      "bodyKeys": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Key"
+        }
+      },
+      "bodyValues": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Value"
+        }
+      },
+      "queryKeys": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Key"
+        }
+      },
+      "queryValues": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Value"
+        }
+      },
+      "bodyEncoding": {
+        "type": "string",
+        "title": "Encoding",
+        "enum": [
+          "json",
+          "form"
+        ]
+      },
+      "headerKeys": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Key"
+        }
+      },
+      "headerValues": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Value"
+        }
+      }
+    }
+  },
   "http-request-delete": {
     "title": "Http-Delete",
     "type": "object",
@@ -199,43 +322,37 @@
         "type": "string",
         "title": "Url"
       },
-      "query": {
+      "queryKeys": {
         "type": "array",
         "items": {
-          "type": "object",
-          "title": "Query",
-          "properties": {
-            "value": {
-              "type": "string",
-              "title": "Value"
-            },
-            "key": {
-              "type": "string",
-              "title": "Key"
-            }
-          }
+          "type": "string",
+          "title": "Key"
         }
       },
-      "headers": {
+      "queryValues": {
         "type": "array",
         "items": {
-          "type": "object",
-          "title": "Headers",
-          "properties": {
-            "header": {
-              "type": "string",
-              "title": "Header"
-            },
-            "value": {
-              "type": "string",
-              "title": "Value"
-            }
-          }
+          "type": "string",
+          "title": "Value"
+        }
+      },
+      "headerKeys": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Key"
+        }
+      },
+      "headerValues": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Value"
         }
       }
     }
   },
-  "http-request-get": {
+  "http-request": {
     "title": "Http-Get",
     "type": "object",
     "properties": {
@@ -243,176 +360,32 @@
         "type": "string",
         "title": "Url"
       },
-      "query": {
+      "queryKeys": {
         "type": "array",
         "items": {
-          "type": "object",
-          "title": "Query",
-          "properties": {
-            "value": {
-              "type": "string",
-              "title": "Value"
-            },
-            "key": {
-              "type": "string",
-              "title": "Key"
-            }
-          }
+          "type": "string",
+          "title": "Key"
         }
       },
-      "headers": {
+      "queryValues": {
         "type": "array",
         "items": {
-          "type": "object",
-          "title": "Headers",
-          "properties": {
-            "header": {
-              "type": "string",
-              "title": "Header"
-            },
-            "value": {
-              "type": "string",
-              "title": "Value"
-            }
-          }
-        }
-      }
-    }
-  },
-  "http-request-post": {
-    "title": "Http-Post",
-    "type": "object",
-    "properties": {
-      "url": {
-        "type": "string",
-        "title": "Url"
-      },
-      "body": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "title": "Body",
-          "properties": {
-            "value": {
-              "type": "string",
-              "title": "Value"
-            },
-            "key": {
-              "type": "string",
-              "title": "Key"
-            }
-          }
+          "type": "string",
+          "title": "Value"
         }
       },
-      "query": {
+      "headerKeys": {
         "type": "array",
         "items": {
-          "type": "object",
-          "title": "Query",
-          "properties": {
-            "value": {
-              "type": "string",
-              "title": "Value"
-            },
-            "key": {
-              "type": "string",
-              "title": "Key"
-            }
-          }
+          "type": "string",
+          "title": "Key"
         }
       },
-      "encoding": {
-        "type": "string",
-        "title": "Encoding",
-        "enum": [
-          "JSON",
-          "Form Urlencoded"
-        ]
-      },
-      "headers": {
+      "headerValues": {
         "type": "array",
         "items": {
-          "type": "object",
-          "title": "Headers",
-          "properties": {
-            "header": {
-              "type": "string",
-              "title": "Header"
-            },
-            "value": {
-              "type": "string",
-              "title": "Value"
-            }
-          }
-        }
-      }
-    }
-  },
-  "http-request-put": {
-    "title": "Http-Put",
-    "type": "object",
-    "properties": {
-      "url": {
-        "type": "string",
-        "title": "Url"
-      },
-      "body": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "title": "Body",
-          "properties": {
-            "value": {
-              "type": "string",
-              "title": "Value"
-            },
-            "key": {
-              "type": "string",
-              "title": "Key"
-            }
-          }
-        }
-      },
-      "query": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "title": "Query",
-          "properties": {
-            "value": {
-              "type": "string",
-              "title": "Value"
-            },
-            "key": {
-              "type": "string",
-              "title": "Key"
-            }
-          }
-        }
-      },
-      "encoding": {
-        "type": "string",
-        "title": "Encoding",
-        "enum": [
-          "JSON",
-          "Form Urlencoded"
-        ]
-      },
-      "headers": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "title": "Headers",
-          "properties": {
-            "header": {
-              "type": "string",
-              "title": "Header"
-            },
-            "value": {
-              "type": "string",
-              "title": "Value"
-            }
-          }
+          "type": "string",
+          "title": "Value"
         }
       }
     }
@@ -421,11 +394,11 @@
     "title": "Interval",
     "type": "object",
     "properties": {
-      "forwardMessage": {
+      "useStaticMessage": {
         "type": "boolean",
         "title": "Forward Message"
       },
-      "interval": {
+      "repeat": {
         "type": "integer",
         "title": "Interval"
       },
@@ -449,7 +422,7 @@
       }
     }
   },
-  "less-than-or-equal": {
+  "less-than-equal": {
     "title": "Less-Than-Or-Equal",
     "type": "object",
     "properties": {
@@ -510,17 +483,7 @@
       }
     }
   },
-  "meshblu-device": {
-    "title": "Meshblu-Device",
-    "type": "object",
-    "properties": {
-      "uuid": {
-        "type": "string",
-        "title": "UUID"
-      }
-    }
-  },
-  "microblu-device": {
+  "microblu": {
     "title": "Microblu-Device",
     "type": "object",
     "properties": {
@@ -536,7 +499,7 @@
         "type": "integer",
         "title": "Pin"
       },
-      "pinType": {
+      "pinConfig": {
         "type": "string",
         "title": "Pin Type",
         "enum": [
@@ -571,7 +534,7 @@
         "type": "string",
         "title": "Value"
       },
-      "notNull": {
+      "not": {
         "type": "boolean",
         "title": "Not Null"
       }
@@ -609,7 +572,7 @@
       }
     }
   },
-  "rss-request": {
+  "rss": {
     "title": "Rss-Request",
     "type": "object",
     "properties": {
@@ -617,38 +580,32 @@
         "type": "string",
         "title": "Url"
       },
-      "query": {
+      "queryKeys": {
         "type": "array",
         "items": {
-          "type": "object",
-          "title": "Query",
-          "properties": {
-            "value": {
-              "type": "string",
-              "title": "Value"
-            },
-            "key": {
-              "type": "string",
-              "title": "Key"
-            }
-          }
+          "type": "string",
+          "title": "Key"
         }
       },
-      "headers": {
+      "queryValues": {
         "type": "array",
         "items": {
-          "type": "object",
-          "title": "Headers",
-          "properties": {
-            "header": {
-              "type": "string",
-              "title": "Header"
-            },
-            "value": {
-              "type": "string",
-              "title": "Value"
-            }
-          }
+          "type": "string",
+          "title": "Value"
+        }
+      },
+      "headerKeys": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Key"
+        }
+      },
+      "headerValues": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "title": "Value"
         }
       }
     }
@@ -671,7 +628,7 @@
     "title": "Schedule",
     "type": "object",
     "properties": {
-      "schedule": {
+      "crontab": {
         "type": "string",
         "title": "Schedule (crontab, Flows run in the UTC timezone)"
       },

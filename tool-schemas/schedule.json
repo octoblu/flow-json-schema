@@ -2,7 +2,7 @@
 	"title": "Schedule",
 	"type": "object",
 	"properties": {
-		"schedule": {
+		"crontab": {
       "type": "string",
       "title": "Schedule (crontab, Flows run in the UTC timezone)"
     },

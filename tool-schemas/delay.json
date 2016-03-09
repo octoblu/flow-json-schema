@@ -1,12 +1,12 @@
 {
-	"title": "Debounce",
+	"title": "Delay",
 	"type": "object",
 	"properties": {
 		"timeout": {
 			"type": "integer",
 			"title": "Timeout"
     },
-    "unit": {
+    "timeoutUnits": {
 			"type": "string",
 			"title": "Units",
 			"enum": [

@@ -2,7 +2,7 @@
 	"title": "Function",
 	"type": "object",
 	"properties": {
-		"javaScript": {
+		"func": {
 			"type": "string"
     }
 	}

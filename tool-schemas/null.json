@@ -6,7 +6,7 @@
 			"type": "string",
 			"title": "Value"
     },
-    "notNull": {
+    "not": {
 			"type": "boolean",
 			"title": "Not Null"
     }

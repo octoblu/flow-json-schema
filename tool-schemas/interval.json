@@ -2,11 +2,11 @@
 	"title": "Interval",
 	"type": "object",
 	"properties": {
-		"forwardMessage": {
+		"useStaticMessage": {
 			"type": "boolean",
 			"title": "Forward Message"
     },
-    "interval": {
+    "repeat": {
 			"type": "integer",
 			"title": "Interval"
     },

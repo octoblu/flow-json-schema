@@ -10,11 +10,11 @@
 			"type": "string",
 			"title": "Key"
     },
-    "minimumCount": {
+    "min": {
 			"type": "integer",
 			"title": "Minimum Count"
     },
-    "maximumCount": {
+    "max": {
 			"type": "integer",
 			"title": "Maximum Count"
     },

@@ -14,7 +14,7 @@
 			"type": "integer",
 			"title": "Pin"
 		},
-    "pinType": {
+    "pinConfig": {
       "type": "string",
       "title": "Pin Type",
       "enum": [

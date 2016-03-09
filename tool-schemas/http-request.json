@@ -1,0 +1,38 @@
+{
+	"title": "Http-Get",
+	"type": "object",
+	"properties": {
+		"url": {
+      "type": "string",
+      "title": "Url"
+    },
+		"queryKeys": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"title": "Key"
+			}
+		},
+		"queryValues": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"title": "Value"
+			}
+		},
+		"headerKeys": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"title": "Key"
+			}
+		},
+		"headerValues": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"title": "Value"
+			}
+		}
+	}
+}

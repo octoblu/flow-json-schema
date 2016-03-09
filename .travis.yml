@@ -8,11 +8,13 @@ before_deploy:
 - cp dist/schema-registry.json deploy/latest
 - cp dist/schema-registry.json deploy/$TRAVIS_TAG
 deploy:
-- provider: s3
+  provider: s3
   access_key_id: AKIAJTQHLCZHU6QOGSWA
-  secret_access_key: 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
-  bucket: operation-schema-registry
-  region: us-west-2
-  skip_cleanup: true
-  detect_encoding: true
+  secret_access_key:
+    secure: h2/VWAK7vGU9L/g84eF73LU4aUwY873YaN/Gj7x8AJoJ8oCMMCcOnsJkGFvS0sqVTx/PtcbUxDOBq7KjfZISZ2bmY9yCxmAVUbeuQizxCvfH/+Ra+ZUbscLQlnDtT6WUCUU9lPjYMlJXu7eoDKtGyp42lCa9DGf+FQSRDN0UL4+w/+LkUTa8odAMFqjXjvSHPgmuQF0w/A0sEUVuaFV/Cm/vUbLYQUO/dY0CwH6vvjPBbpkH19JVQL2Efwm8Oi/prxZ/YSGvdp5bDKrl6NzrD5OVQ1CQZjplYtJx97zVGqGe9ScujP8YncHMyu0zWYBzt6HXizeaklqDvJBPIguPUm8PqxSitBofwe+EtC7VvwQJNdhujxveSJ4/R9+HFhhKZvOvQe3Byx5sEgsPiEcZqF/aLP+R5a4QA/K4XNbtYl2o/xXOsAVU8N9r1jf2fZlXzPS9ICL1tR1ojy+MGUQ+FyoRGycr9fDqVDa7mtYze/BYNuOYR0HlcbTv23UA6sriFPBema2qc9VNM5ZM9F6w/FgFQSarpWZ6aQ59KQ6w1FvCp8WsBo3aZbR8AOsNf/4oAsnDx7MsVxhtNOM0/gCRlRV8/lZ2ctHyuEzzGpp8DnCSh8UDD+ri13aXNuLd2mVIcc+p7qfWogiqRyQ4rXYcjgysceaDEFGxroeN2AaQFBI=
+  bucket: tool-schema-registry
   local-dir: deploy
+  acl: ''
+  on:
+    repo: octoblu/flow-json-schema
+    tags: true

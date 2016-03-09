@@ -11,7 +11,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build', function() {
-  return gulp.src('./tool-schemas/**/*.json').pipe(jsonCombine('schemaRegistry.json', function(data) {
+  return gulp.src('./tool-schemas/**/*.json').pipe(jsonCombine('schema-registry.json', function(data) {
     return new Buffer(JSON.stringify(data, null, 2));
   })).pipe(gulp.dest('./dist'));
 });

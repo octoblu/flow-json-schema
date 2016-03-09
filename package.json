@@ -1,0 +1,20 @@
+{
+  "name": "flow-json-schema",
+  "version": "1.0.1",
+  "description": "Json schemas for flows and nodes and such",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/octoblu/flow-json-schema.git"
+  },
+  "author": "Octoblu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/octoblu/flow-json-schema/issues"
+  },
+  "homepage": "https://github.com/octoblu/flow-json-schema#readme"
+}

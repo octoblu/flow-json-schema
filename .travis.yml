@@ -2,12 +2,21 @@ language: node_js
 node_js:
 - '0.11'
 - '0.10'
+install:
+- sudo pip install awscli  #install AWS cli
 before_deploy:
 - ./node_modules/gulp/bin/gulp.js build
 - mkdir -p deploy/latest
 - mkdir -p deploy/$TRAVIS_TAG
 - cp dist/schema-registry.json deploy/latest
 - cp dist/schema-registry.json deploy/$TRAVIS_TAG
+env:
+  global:
+    secure: oQF0NGUljvB1/SDEyl7682DHwT5k2Tr25WentG6TjRwolledSmO3U4pxZ8RWlVmP1GsZIi5DCq/fyXfMl0UX+xXVsZqKKjRHEuJKBAlkRWS35ciawbafOI7rtK0MUb6/l8zyALyi/80MDey90xIZ8wQfORb2RoD9OnaoFtW2xlZP44hmlmakxYUf013F+NYMmLaG3m/9uxAU650sH1dYig8bEOLTsR8v3Ougj7rKr25MXSjOtZZ211feSUrZtfeRvpTeltA204dTwzk7waLwXflzWTnvA6VHYXHFIp/UhfOKKBo6ODrsAs2m/HQZUd+b63nW/Ep5IsyckdxlGU+IzvUcrkasvJL4Y80vF4nLA7UDf31cr7LKjYdpRddhbmGOcnNg4ubvRHL9dqOe4alhuR0J5f1F03dKvvnxB8vpwd7ps8JIg9rcGFtjt0/ExBb3CVsCg0dNkelOGPQGSE/vMqW0mItl+xZo6vjrcAlRoQdYUBbatWsBfqnOdiIxbIArzgnOhsA3g4tGvunMpKU5A5CTgHlqaKrttAyuy0LWpAIPhds09wXyKaCq3V2FGg6TmYv9E/MkZ1VBWRU8MFOY94KCzqPEOpop/Nh8v7+CDP/9R6VVvfNRH6AqVwL4gSex477hW5ywOKLeIdItipYuOE+wo+cZJMAAOzxvmwQpw1o=
+after_success:
+  - if [[ "$TRAVIS_BRANCH" != "master" ]]; then echo "Deployments are only done for the master branch. Current branch is $TRAVIS_BRANCH"; exit 0; fi
+  - echo "Deploying build $TRAVIS_BUILD_NUMBER"
+  - aws s3 cp deploy/ s3://tool-schema-registry --recursive
 deploy:
   provider: s3
   access_key_id: AKIAJTQHLCZHU6QOGSWA

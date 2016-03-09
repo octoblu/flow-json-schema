@@ -1,6 +1,6 @@
 {
   "name": "flow-json-schema",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Json schemas for flows and nodes and such",
   "main": "gulpfile.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/octoblu/flow-json-schema#readme",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2"
+    "gulp-clean": "^0.3.2",
+    "gulp-jsoncombine": "^1.0.3"
   }
 }

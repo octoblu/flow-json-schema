@@ -1,11 +1,11 @@
 {
   "name": "flow-json-schema",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Json schemas for flows and nodes and such",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified, but like, you good bruh\""
   },
   "repository": {
     "type": "git",

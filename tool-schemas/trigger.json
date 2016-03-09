@@ -10,7 +10,7 @@
 			"type": "string",
 			"title": "Payload Type",
 			"enum": [
-				"data",
+				"date",
 				"none",
 				"string"
 			]

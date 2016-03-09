@@ -9,7 +9,7 @@ before_deploy:
 - cp dist/schema-registry.json deploy/$TRAVIS_TAG
 deploy:
 - provider: s3
-  access_key_id: AKIAJH2D5IPIRHYJT5IA
+  access_key_id: AIDAI3VAWMGY3735ZPZ2E
   secret_access_key: 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
   bucket: operation-schema-registry
   region: us-west-2

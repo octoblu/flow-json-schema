@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/octoblu/flow-json-schema#readme",
   "dependencies": {
+    "cors": "^2.7.1",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-connect": "^3.1.0",

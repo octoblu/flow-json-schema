@@ -16,7 +16,6 @@ deploy:
   bucket: tool-schema-registry
   region: us-west-2
   local-dir: deploy
-  acl: ''
   on:
     tags: true
     all_branches: true

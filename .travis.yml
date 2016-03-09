@@ -17,6 +17,7 @@ deploy:
   region: us-west-2
   local-dir: deploy
   acl: ''
+  all_branches: true
   on:
     tags: true
   api_key:

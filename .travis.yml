@@ -1,17 +1,12 @@
 language: node_js
 node_js:
-- '5'
-before_deploy:
-- ./node_modules/gulp/bin/gulp.js build
-- mkdir -p deploy/latest
-- mkdir -p deploy/$TRAVIS_TAG
-- cp dist/schema-registry.json deploy/latest
-- cp dist/schema-registry.json deploy/$TRAVIS_TAG
+- '0.11'
+- '0.10'
 deploy:
   provider: s3
   access_key_id: AKIAJTQHLCZHU6QOGSWA
   secret_access_key:
-    secure: h2/VWAK7vGU9L/g84eF73LU4aUwY873YaN/Gj7x8AJoJ8oCMMCcOnsJkGFvS0sqVTx/PtcbUxDOBq7KjfZISZ2bmY9yCxmAVUbeuQizxCvfH/+Ra+ZUbscLQlnDtT6WUCUU9lPjYMlJXu7eoDKtGyp42lCa9DGf+FQSRDN0UL4+w/+LkUTa8odAMFqjXjvSHPgmuQF0w/A0sEUVuaFV/Cm/vUbLYQUO/dY0CwH6vvjPBbpkH19JVQL2Efwm8Oi/prxZ/YSGvdp5bDKrl6NzrD5OVQ1CQZjplYtJx97zVGqGe9ScujP8YncHMyu0zWYBzt6HXizeaklqDvJBPIguPUm8PqxSitBofwe+EtC7VvwQJNdhujxveSJ4/R9+HFhhKZvOvQe3Byx5sEgsPiEcZqF/aLP+R5a4QA/K4XNbtYl2o/xXOsAVU8N9r1jf2fZlXzPS9ICL1tR1ojy+MGUQ+FyoRGycr9fDqVDa7mtYze/BYNuOYR0HlcbTv23UA6sriFPBema2qc9VNM5ZM9F6w/FgFQSarpWZ6aQ59KQ6w1FvCp8WsBo3aZbR8AOsNf/4oAsnDx7MsVxhtNOM0/gCRlRV8/lZ2ctHyuEzzGpp8DnCSh8UDD+ri13aXNuLd2mVIcc+p7qfWogiqRyQ4rXYcjgysceaDEFGxroeN2AaQFBI=
+    secure: fjMr4DuL0/NETMSunb3nrN/Jmf3b/37od/eg/6MQY075vIhirdWBnTg6dhM0q4FiryNk9V56rGCdo7ovhMKTfgW3tTENTDgl943TV4iajoFKsAhdZDT/2Ok2C6w/EW4+a1vNYXKJM3wMMkaVNpsESzcSMj6ilI+epk9aKm+b/nbl+p4nKmUKgVyoA9zek5iKwWUoRBgqpFJ9Ki0MrBZAC442eKSLhIBkD9I8dvaZ0DjKxwc/D/SRcQbYFPdT4YjaglhmBtYJIixeY40JsBLW5vgqalZreKDQUiIX3bT7C7dvd06HvNBCL1JTz+iAtKuaABoWdiVE5el4vfg05IzW4bgJsQab938YNV94HudwiDbigud8HTqyQiw1MpAoyQTu+tkZz5+ZcsGL8BCMdenEoyKq7vmx+jX1Im/NMp4WVX7aaEMI8zWyF2CI3AWrMfQWqkuFgil4zM3kLwTbQS618AOiDZQAJA4nrn9Q/uP5k0ySC5w+lTiOAkW9JG2+5f8YDW3+BBddxtBsjBi7X15Axt3TuRzEkMTZ723jgLacNzTTwjdSU8GfB3lo6W93M5HkLkzirYa61YumsM5YVcwHGpwc27t9mexifBeA1cWCpbOVw+7TFcwrNCwuWoyFsJMoMm/wBYnaMDfRzFUT7vyqViA/9x5ROHiVWpjhoyVW+aY=
   bucket: tool-schema-registry
   local-dir: deploy
   acl: ''

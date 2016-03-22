@@ -3,13 +3,8 @@
 	"type": "object",
 	"properties": {
 		"topic": {
-			"title": "Topic",
-			"type": "object",
-			"properties": {
-				"value": {
-					"type": "string"
-				}
-			}
+			"type": "string",
+			"title": "Topic"
     }
 	}
 }

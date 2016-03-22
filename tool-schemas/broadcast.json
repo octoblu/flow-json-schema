@@ -5,7 +5,9 @@
 		"topic": {
 			"title": "Topic",
 			"properties": {
-				"type": "string"
+				"value": {
+					"type": "string"
+				}
 			}
     }
 	}

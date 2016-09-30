@@ -1,0 +1,11 @@
+{
+	"title": "JSON Template",
+	"type": "object",
+	"properties": {
+    "templateJson": {
+      "type": "string",
+      "title": "Template",
+			"required": true
+    }
+  }
+}

@@ -4,8 +4,10 @@ node_js:
 before_deploy:
 - ./node_modules/gulp/bin/gulp.js build
 - mkdir -p deploy/$TRAVIS_TAG
+- mkdir -p deploy/latest
 - cp dist/schema-registry.json deploy/$TRAVIS_TAG
-- cp dist/schema-registry.json deploy/
+- cp dist/schema-registry.json deploy/latest
+
 deploy:
   provider: s3
   access_key_id: AKIAJH2D5IPIRHYJT5IA

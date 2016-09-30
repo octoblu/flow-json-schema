@@ -1,6 +1,6 @@
 {
   "name": "flow-json-schema",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Json schemas for flows and nodes and such",
   "main": "gulpfile.js",
   "scripts": {
